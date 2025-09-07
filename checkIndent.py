@@ -33,8 +33,8 @@ def check(file):
                 comment = False
 
             #check if line is not empty after removing wight spaces
-            #and check if line is not starting with in line comment
-            if  line.strip() and (line.strip().find("//")==-1):
+            #and check if line does not start with in line comment
+            if  line.strip() and (line.strip().startswith("//")==False):
                 # print(line, end="")
 
                 #check if line starts with }, it should have 1 less indent
